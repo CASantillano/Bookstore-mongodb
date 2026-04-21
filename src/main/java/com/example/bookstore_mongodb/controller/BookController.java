@@ -26,7 +26,7 @@ public class BookController {
         return bookService.createBook(book);
     }
 
-    @DeleteMapping("api/books/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteBook(@PathVariable String id){
         boolean isDeleted = bookService.deleteBook(id);
         if (isDeleted){
